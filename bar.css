@@ -1,0 +1,180 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    background: #aaa;
+    /*background: url("/IMG_5658.jpg");*/
+    color:#ddd;
+    font-family: bogart, overpass, sans-serif;
+  }
+  header{
+    background-color: #33333390;
+  }
+  a{
+    text-decoration: none;
+    color: #333;
+  }
+  .imagen{
+    width: 30%;
+  }
+  h1, h3, h2{
+    /*color:#ff6622;*/
+    color:#333;
+  }
+  .logo{
+    width: 15%;
+    border-radius: 50%;
+  }
+  .caja-logo{
+    display: flex;
+    justify-content: center;
+  }
+  .footer{
+    font-family: overpass, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:#333;
+  }
+  .footer2{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color:#333;
+  }
+  .datos{
+    font-size: 30px;
+    color:#333;
+  }
+  /*estilos para el carrusel*/
+  .container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width:600px;
+    height: 800px;
+  }
+  .main-heading{
+    padding: 2rem 0 2rem 0;
+    text-align: center;
+  }
+  .content{
+    position:relative;
+    width:100%;
+    height: 80%;
+  }
+  .carousel-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    text-align: center;
+    z-index:50;
+  }
+  .carousel-heading{
+    font-size: 3rem;
+    color:#ddd;
+    margin-bottom: 1rem;
+  }
+  .slideshow{
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50%;
+  }
+  .slideshow-wrapper{
+    display: flex;
+    width: 300%;
+    height: 100%;
+    position: relative;
+    animation: slideshow 10s infinite;
+  }
+  .slide{
+    width: 100%;
+    height: 100%;
+  }
+  .slide-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @keyframes slideshow{
+    0% {left:0%;}
+    10% {left:0%;};
+    15% {left: -100%;}
+    25% {left: -100%;}
+    30% {left: -200%;}
+    40% {left: -200%;}
+    45% {left: -300%;}
+    55% {left: -300%;}
+    60% {left: -200%;}
+    70% {left: -200%;}
+    75% {left: -100%;}
+    85% {left: -100%;}
+    90% {left: 0%;}
+  }
+  /*estilos para el menú desplegable*/
+  .bi-list, .bi-x{
+    color:#000;
+    background: #666;
+  }
+  .cont-menu{
+    position:absolute;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  nav ul{
+    list-style: none;
+  }
+  .respmenu a{
+    color:inherit;
+    text-decoration: none;
+    display:block;
+    padding: 10px 20px;
+    border-bottom: 2px solid #456789;
+    /*max-width: 100px;*/
+    background:none;
+    text-shadow: 1px 1px black;
+  }
+  .respmenu input[type="checkbox"], .respmenu .bi-list, .respmenu .bi-x{
+    position:absolute;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    right: 0.3rem;
+    top:6px;
+    width: 48px;
+    height: 48px;
+  }
+  .respmenu .bi-list, .respmenu .bi-x{
+    font-size: 48px;
+    pointer-events: none;
+  }
+  .respmenu input[typpe="checkbox"]{
+    opacity: 0;
+  }
+  .respmenu{
+    /*color: #ffffff;*/
+    position:relative;
+    /*background: #56524b;*/
+    min-height: 48px;
+    width: 35%;
+  }
+  .respmenu nav{
+    display: none;
+  }
+  .respmenu input:checked ~ nav{
+    display: block;
+  }
+  .respmenu input:checked ~ .bi-list{
+    display: none;
+  }
+  .respmenu input:not(:checked) ~ .bi-x{
+    display: none;
+  }
